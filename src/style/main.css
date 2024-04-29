@@ -1,0 +1,22 @@
+@import url("./tailwind.css");
+
+@font-face {
+  font-family: "OAGothic-ExtraBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/OAGothic-ExtraBold.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+:root {
+  line-height: 1.5;
+  font-weight: 500;
+  color-scheme: light dark;
+  color: white;
+  background-color: #474747;
+  font-family: "OAGothic-ExtraBold";
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
