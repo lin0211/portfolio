@@ -1,3 +1,4 @@
+import { About } from "./components/About/About";
 import { Intro } from "./components/Intro/Intro";
 import "./style/main.css";
 import "./style/reset.css";
@@ -7,7 +8,7 @@ function App() {
   return (
     <>
       <Intro />
-      <div className="text-purple-300">체크</div>
+      <About />
     </>
   );
 }
