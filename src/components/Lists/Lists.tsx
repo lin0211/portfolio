@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Lists = () => {
   const [openListsClassName, setOpenListsClassName] = useState(
-    "absolute w-full h-full bg-main-lightGray z-10 flex flex-col justify-center align-middle gap-12 text-main-purple hidden"
+    "absolute w-full h-full bg-main-lightGray z-10 flex flex-col justify-center align-middle gap-12 text-main-purple hidden font-OAGothic-ExtraBold text-lg"
   );
   const showLists = () =>
     setOpenListsClassName(openListsClassName.replace(" hidden", ""));

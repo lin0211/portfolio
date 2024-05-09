@@ -1,14 +1,15 @@
 import { About } from "./components/About/About";
+import { Education } from "./components/Education/Education";
 import { Intro } from "./components/Intro/Intro";
-import "./style/main.css";
-import "./style/reset.css";
-import "./style/tailwind.css";
+import { Project } from "./components/Project/Project";
 
 function App() {
   return (
     <>
       <Intro />
       <About />
+      <Education />
+      <Project />
     </>
   );
 }
