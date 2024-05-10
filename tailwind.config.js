@@ -19,6 +19,7 @@ export default {
       "main-purple": "#755ac6",
       "main-lightGray": "#d9d9d9",
       "main-blue": "#6A8FDD",
+      white: "#ffffff",
     },
     extend: {},
   },
