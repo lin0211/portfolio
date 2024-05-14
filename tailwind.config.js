@@ -1,4 +1,22 @@
+import plugin from "tailwindcss/plugin";
 /** @type {import('tailwindcss').Config} */
+
+const rotate = plugin(function ({ addUtilities }) {
+  addUtilities({
+    ".rotate-y-180": {
+      transform: "rotateY(180deg)",
+    },
+    ".preserve-3d": {
+      transformStyle: "preserve-3d",
+    },
+    ".perspective": {
+      perspective: "1000px",
+    },
+    ".backface-hidden": {
+      backfaceVisibility: "hidden",
+    },
+  });
+});
 export default {
   content: ["./src/**/*.{html,js,jsx,tsx}"],
   theme: {
@@ -14,14 +32,16 @@ export default {
       "OAGothic-Medium": ["OAGothic-Medium"],
       "OAGothic-ExtraBold": ["OAGothic-ExtraBold"],
     },
-    colors: {
-      "main-gray": "#474747",
-      "main-purple": "#755ac6",
-      "main-lightGray": "#d9d9d9",
-      "main-blue": "#6A8FDD",
-      white: "#ffffff",
+
+    extend: {
+      colors: {
+        "main-gray": "#474747",
+        "main-purple": "#755ac6",
+        "main-lightGray": "#d9d9d9",
+        "main-blue": "#6A8FDD",
+        white: "#ffffff",
+      },
     },
-    extend: {},
   },
-  plugins: [],
+  plugins: [rotate],
 };
