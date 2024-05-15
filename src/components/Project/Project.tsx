@@ -9,31 +9,38 @@ export const Project = () => {
           PROJECT
         </h2>
 
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {projectLists &&
             projectLists.map((list) => {
               const descriptionArray = list.description.split("/ ");
               return (
                 <div key={list.name}>
-                  <div className="w-[24rem] h-[18rem] bg-transparent cursor-pointer group perspective">
-                    <div className="relative preserve-3d group-hover:rotate-y-180 w-full h-full duration-1000">
-                      <div className="absolute backface-hidden border-2 w-full h-full">
+                  <div className="w-[14rem] h-[10rem] sm:w-[18rem] sm:h-[14rem] lg:w-[26rem] lg:h-[20rem] bg-transparent cursor-pointer group perspective">
+                    <div className="relative preserve-3d group-hover:rotate-y-180 w-full h-full duration-1000 rounded">
+                      <div className="absolute backface-hidden border-4 w-full h-full rounded">
                         <img
                           className="w-full h-full object-cover"
                           src={list.imageSrc[1]}
-                          alt=""
+                          alt={list.name}
                         />
                       </div>
-                      <div className="absolute rotate-y-180 backface-hidden border-2 w-full h-full bg-main-gray">
-                        <h3 className="font-OAGothic-ExtraBold text-base sm:text-xl xl:text-2xl">
-                          {list.name}
-                        </h3>
-                        <p className="text-sm md:text-lg xl:text-xl hidden xs:block">
-                          {descriptionArray[0]}
-                        </p>
-                        <p className="text-sm md:text-lg xl:text-xl hidden xs:block">
-                          {descriptionArray[1]}
-                        </p>
+                      <div className="absolute rotate-y-180 backface-hidden border-4 w-full h-full bg-main-gray rounded flex justify-center">
+                        <div className="flex flex-col justify-center text-center">
+                          <img
+                            className="w-12 mx-auto mb-2"
+                            src={list.imageSrc[0]}
+                            alt={list.name}
+                          />
+                          <h3 className="font-OAGothic-ExtraBold text-base sm:text-xl xl:text-2xl">
+                            {list.name}
+                          </h3>
+                          <p className="text-sm md:text-lg xl:text-xl hidden xs:block">
+                            {descriptionArray[0]}
+                          </p>
+                          <p className="text-sm md:text-lg xl:text-xl hidden xs:block">
+                            {descriptionArray[1]}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
