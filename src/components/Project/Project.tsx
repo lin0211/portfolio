@@ -1,9 +1,7 @@
-import Lists from "../Lists/Lists";
 import { projectLists } from "./Project_List";
 export const Project = () => {
   return (
-    <section className="h-screen relative">
-      <Lists />
+    <section id="project" className="snap-start h-screen relative">
       <div className="h-screen flex flex-col justify-center items-center gap-10 px-4">
         <h2 className="text-3xl xl:text-5xl font-OAGothic-ExtraBold">
           PROJECT
