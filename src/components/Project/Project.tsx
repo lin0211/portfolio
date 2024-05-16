@@ -15,14 +15,17 @@ export const Project = () => {
                 <div key={list.name}>
                   <div className="w-[14rem] h-[10rem] sm:w-[18rem] sm:h-[14rem] lg:w-[26rem] lg:h-[20rem] bg-transparent cursor-pointer group perspective">
                     <div className="relative preserve-3d group-hover:rotate-y-180 w-full h-full duration-1000 rounded">
-                      <div className="absolute backface-hidden border-4 w-full h-full rounded">
+                      <div className="absolute backface-hidden border-2 shadow-xl w-full h-full rounded">
                         <img
                           className="w-full h-full object-cover"
                           src={list.imageSrc[1]}
                           alt={list.name}
                         />
                       </div>
-                      <div className="absolute rotate-y-180 backface-hidden border-4 w-full h-full bg-main-gray rounded flex justify-center">
+                      <div
+                        title="프로젝트 보러가기"
+                        className="absolute rotate-y-180 backface-hidden border-2 shadow-xl w-full h-full bg-main-gray rounded flex justify-center"
+                      >
                         <div className="flex flex-col justify-center text-center">
                           <img
                             className="w-12 mx-auto mb-2"

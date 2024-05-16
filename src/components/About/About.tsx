@@ -1,6 +1,11 @@
 export const About = () => {
   return (
     <section id="about" className="snap-start h-screen relative">
+      {/* <img
+        className="absolute h-full w-full object-cover opacity-20 -z-10"
+        src="/background4.jpg"
+        alt=""
+      /> */}
       <div className="h-screen flex flex-col justify-center items-center gap-12">
         <figure>
           <img className="w-20 h-20" src="/sl_logo.svg" alt="서린 개인 로고" />
