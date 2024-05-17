@@ -1,7 +1,7 @@
 export const Intro = () => {
   return (
     <section
-      id="intro"
+      id="home"
       className="snap-start bg-[url('/intro.png')] h-screen bg-cover bg-center bg-no-repeat relative"
     >
       <div className="absolute text-center top-24 right-1/2 transform translate-x-1/2 sm:translate-x-0  sm:text-right sm:top-auto sm:right-6 sm:bottom-20 lg:right-20 flex flex-col gap-4 font-OAGothic-ExtraBold">
