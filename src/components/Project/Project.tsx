@@ -7,13 +7,13 @@ export const Project = () => {
           PROJECT
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-8">
           {projectLists &&
             projectLists.map((list) => {
               const descriptionArray = list.description.split("/ ");
               return (
                 <div key={list.name} title="프로젝트 보러가기">
-                  <div className="w-[14rem] h-[10rem] sm:w-[18rem] sm:h-[14rem] lg:w-[26rem] lg:h-[20rem] bg-transparent cursor-pointer group perspective">
+                  <div className="w-[14rem] h-[10rem] sm:w-[18rem] sm:h-[14rem] lg:w-[22rem] lg:h-[16rem] bg-transparent cursor-pointer group perspective">
                     <div className="relative preserve-3d group-hover:rotate-y-180 w-full h-full duration-1000 rounded">
                       <div className="absolute backface-hidden border-2 shadow-xl w-full h-full rounded">
                         <img

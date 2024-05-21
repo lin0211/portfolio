@@ -2,7 +2,7 @@ import moveToView from "@/utils/moveToView";
 import { useState } from "react";
 
 export const Navigation = () => {
-  const navList = ["home", "about", "education", "project", "about"];
+  const navList = ["home", "about", "education", "project", "skills"];
   const [navClassName, setNavClassName] = useState(
     "w-fit py-2 px-4 fixed z-10 bg-black/20 backdrop-blur-sm top-4 left-0 shadow-lg hidden rounded-e-full"
   );
@@ -28,12 +28,12 @@ export const Navigation = () => {
         />
       </button>
       <nav className={navClassName}>
-        <ul className="flex gap-4 justify-center items-center xl:gap-12 text-sm sm:text-base">
+        <ul className="flex gap-4 justify-center items-center xl:gap-12 text-sm sm:text-base text-white/80">
           {navList.map((list, index) => {
             return (
               <li key={index}>
                 <button
-                  className="hover:text-main-blue"
+                  className="hover:border-b"
                   onClick={() => moveToView(list)}
                 >
                   {list.toUpperCase()}
