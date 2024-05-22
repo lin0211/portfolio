@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 export const About = () => {
   return (
     <section id="about" className="snap-start h-screen relative">
@@ -12,6 +13,13 @@ export const About = () => {
           <p>사용자 중심의 디자인을 실현하기 위해 노력하는</p>
           <p>프론트엔드 개발자 정서린입니다.</p>
         </div>
+        <motion.div
+          className="w-20 h-20 bg-stone-100 rounded-full text-black flex justify-center items-center text-2xl"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          ?
+        </motion.div>
       </div>
     </section>
   );

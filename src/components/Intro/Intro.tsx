@@ -8,6 +8,7 @@ export const Intro = () => {
         <p className="text-4xl xl:text-6xl bg-main-gray bg-opacity-50 text-nowrap">
           프론트엔드 개발자
         </p>
+
         <p className="text-7xl xl:text-8xl">정서린</p>
       </div>
     </section>
