@@ -1,20 +1,13 @@
-import moveToView from "@/utils/moveToView";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
-  const navList = [
-    "home",
-    "about",
-    "education",
-    "project",
-    "skills",
-    "contact",
-  ];
+  const navList = ["home", "project", "contact"];
   const [navClassName, setNavClassName] = useState(
-    "w-fit py-2 px-4 fixed z-10 bg-black/20 backdrop-blur-sm top-4 left-0 shadow-lg hidden rounded-e-full"
+    "w-fit py-2 px-4 fixed z-30 bg-black/20 backdrop-blur-sm top-4 left-0 shadow-lg hidden rounded-e-full"
   );
   const [openNavButtonClassName, setOpenNavButtonClassName] = useState(
-    "absolute py-2 top-4 left-0 -translate-x-2 hover:translate-x-0 hover:duration-200 z-10 bg-black/10 rounded-e-full ps-2"
+    "absolute py-2 top-4 left-0 -translate-x-2 hover:translate-x-0 hover:duration-200 z-30 bg-black/10 rounded-e-full ps-2"
   );
 
   const showLists = () => {
@@ -38,13 +31,13 @@ export const Navigation = () => {
         <ul className="flex gap-4 justify-center items-center xl:gap-12 text-sm sm:text-base text-white/80 ">
           {navList.map((list, index) => {
             return (
-              <li key={index}>
-                <button
-                  className="hover:border-b-2 hover:text-white hover:scale-110"
-                  onClick={() => moveToView(list)}
-                >
+              <li
+                key={index}
+                className="hover:border-b-2 hover:text-white hover:scale-110"
+              >
+                <Link to={list == "home" ? "/" : "/" + list}>
                   {list.toUpperCase()}
-                </button>
+                </Link>
               </li>
             );
           })}

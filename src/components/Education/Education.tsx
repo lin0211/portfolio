@@ -23,7 +23,7 @@ export const Education = () => {
                   <div className="flex flex-col justify-evenly h-24">
                     <h3 className="font-OAGothic-ExtraBold text-lg sm:xl xl:text-2xl text-nowrap">
                       {list.school}
-                      <span className="bg-main-purple text-sm xl:text-base py-1 px-2 ml-4 rounded font-OAGothic-Medium">
+                      <span className="bg-main-blue text-sm xl:text-base py-1 px-2 ml-4 rounded font-OAGothic-Medium font-sans">
                         {list.state}
                       </span>
                     </h3>
