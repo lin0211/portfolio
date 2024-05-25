@@ -8,7 +8,10 @@ export const Project = () => {
   return (
     <>
       <Navigation />
-      <section id="project" className="snap-start h-screen relative">
+      <section
+        id="project"
+        className="snap-start h-screen relative bg-main-background bg-cover"
+      >
         <div className="h-screen flex flex-col justify-center items-center gap-10 px-4">
           <h2 className="text-3xl xl:text-5xl font-OAGothic-ExtraBold">
             PROJECT

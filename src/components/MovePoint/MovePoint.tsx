@@ -1,46 +1,29 @@
-import moveToView from "@/utils/moveToView";
-import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 
 export const MovePoint = () => {
-  const navList = ["home", "about", "education", "skills"];
-  const [activeSection, setActiveSection] = useState<string>("");
-
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY + window.innerHeight / 2;
-    navList.map((list) => {
-      const element = document.getElementById(list);
-      console.log(element);
-      if (element) {
-        if (
-          element.offsetTop <= scrollPosition &&
-          element.offsetTop + element.offsetHeight > scrollPosition
-        ) {
-          setActiveSection(list);
-        }
-      }
-    });
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const navList = ["intro", "about", "education", "skills"];
 
   return (
     <nav className="z-10 fixed left-1/2 -translate-x-1/2 top-4">
       <ul className="flex gap-3 justify-center items-center xl:gap-4 ">
         {navList.map((list, index) => {
-          console.log(activeSection);
           return (
             <li key={index}>
-              <button
-                className={`w-3 h-3 rounded-full bg-white hover:bg-main-blue ${
-                  activeSection === list ? "bg-main-blue" : "bg-white"
-                }`}
-                onClick={() => moveToView(list)}
-              ></button>
+              <Link
+                activeClass="text-main-blue text-xl"
+                to={list}
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+              >
+                <span
+                  className="cursor-pointer hover:text-main-blue"
+                  title={list}
+                >
+                  ●
+                </span>
+              </Link>
             </li>
           );
         })}

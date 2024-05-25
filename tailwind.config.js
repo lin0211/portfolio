@@ -32,7 +32,6 @@ export default {
       "OAGothic-Medium": ["OAGothic-Medium"],
       "OAGothic-ExtraBold": ["OAGothic-ExtraBold"],
     },
-
     extend: {
       colors: {
         "main-gray": "#474747",
@@ -40,6 +39,9 @@ export default {
         "main-lightGray": "#d9d9d9",
         "main-blue": "#6A8FDD",
         white: "#ffffff",
+      },
+      backgroundImage: {
+        "main-background": "url('/background.webp')",
       },
     },
   },
