@@ -12,7 +12,7 @@ export const Home = () => {
       {/* <div className="snap-y h-screen w-screen snap-mandatory overflow-x-hidden scroll-smooth"> */}
       <Navigation />
       <MovePoint />
-      <div className="bg-main-background bg-cover">
+      <div className="bg-main-background bg-cover overflow-auto snap-y snap-mandatory h-screen">
         <Intro />
         <About />
         <Education />

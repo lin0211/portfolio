@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const Skills = () => {
   return (
-    <section id="skills" className="snap-start h-screen relative">
+    <section id="skills" className="h-screen">
       <div className="h-screen flex flex-col justify-center items-center gap-10 px-4">
         <h2 className="text-3xl xl:text-5xl font-OAGothic-ExtraBold">SKILLS</h2>
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 xs:gap-8">

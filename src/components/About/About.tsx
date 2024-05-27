@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 export const About = () => {
   return (
-    <section id="about" className="snap-start h-screen relative ">
+    <section id="about" className="h-screen">
       <h2 className="sr-only">ABOUT</h2>
       <div className="h-screen flex flex-col justify-center items-center gap-12">
         <motion.figure

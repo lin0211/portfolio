@@ -7,7 +7,7 @@ export const Navigation = () => {
     "w-fit py-2 px-4 fixed z-30 bg-black/20 backdrop-blur-sm top-4 left-0 shadow-lg rounded-e-full"
   );
   const [openNavButtonClassName, setOpenNavButtonClassName] = useState(
-    "absolute py-2 top-4 left-0 -translate-x-2 hover:translate-x-0 hover:duration-200 z-30 bg-black/10 rounded-e-full ps-2 hidden"
+    "fixed py-2 top-4 left-0 -translate-x-2 hover:translate-x-0 hover:duration-200 z-30 bg-black/10 rounded-e-full ps-2 hidden"
   );
 
   const showLists = () => {
@@ -22,7 +22,7 @@ export const Navigation = () => {
     <>
       <button className={openNavButtonClassName} onClick={showLists}>
         <img
-          className="w-8 h-8 p-2 sm:w-10 sm:h-10"
+          className="w-8 h-8 p-2 sm:w-10 sm:h-10 "
           src="/right_arrow.svg"
           alt="리스트 열기"
         />

@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 
 export const MovePoint = () => {
   const navList = ["intro", "about", "education", "skills"];
-
+  //https://hyomyo.tistory.com/104
   return (
     <nav className="z-10 fixed left-1/2 -translate-x-1/2 top-4">
       <ul className="flex gap-3 justify-center items-center xl:gap-4 ">

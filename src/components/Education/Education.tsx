@@ -2,7 +2,7 @@ import { educationLists } from "./Education_List";
 
 export const Education = () => {
   return (
-    <section id="education" className="snap-start h-screen relative">
+    <section id="education" className="h-screen">
       <div className="h-screen flex flex-col md:flex-row justify-center items-center gap-10 xl:gap-16 p-4">
         <h2 className="text-3xl lg:text-4xl xl:text-5xl font-OAGothic-ExtraBold">
           EDUCATION
