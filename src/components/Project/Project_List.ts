@@ -1,5 +1,6 @@
 export const projectLists = [
   {
+    id: "project-01",
     name: "드림(DREAM)",
     description: "환경을 생각하는 거래,/ 중고 판매 온라인 플랫폼",
     date: "2024년 2월 19일 - 2024년 3월 14일",
@@ -21,6 +22,7 @@ export const projectLists = [
     role: "판매상품 리스트 페이지, 상품 디테일 페이지, 장바구니·결제 페이지 담당",
   },
   {
+    id: "project-02",
     name: "BUNNY TO CARROT",
     description: "토끼에게 당근까지의 길을/ 만들어주는 스와이퍼 게임",
     date: "2023년 12월 21일 - 2023년 12월 25일",
@@ -31,6 +33,7 @@ export const projectLists = [
     role: "25개의 스와이퍼를 이용한 슬라이드 퍼즐, 캐릭터 애니메이션",
   },
   {
+    id: "project-03",
     name: "JFAM",
     description: "OTT 사이트 티빙/ 반응형 사이트로 구현",
     date: "2024년 1월 4일 - 2024년 1월 16일",
@@ -52,6 +55,7 @@ export const projectLists = [
     role: "회원가입 페이지, 프로필 페이지 담당",
   },
   {
+    id: "project-04",
     name: "내 맘대로 영화 평가",
     description: "영화에 대해 자체적으로/ 남기는 리뷰 리스트",
     date: "2024년 2월 19일 - 2024년 3월 14일",

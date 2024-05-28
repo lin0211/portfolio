@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Footer } from "../Footer/Footer";
 import { educationLists } from "./Education_List";
-import { easeInOut, motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 export const Education = () => {
   const educationRef = useRef(null);
@@ -60,7 +60,7 @@ export const Education = () => {
                   <motion.div
                     variants={items}
                     key={list.school}
-                    className="flex justify-start items-center gap-4  sm:gap-8 h-24"
+                    className="flex justify-start items-center gap-2 xs:gap-4 sm:gap-8 h-24"
                   >
                     <img
                       className="h-full p-2"
@@ -68,14 +68,14 @@ export const Education = () => {
                       alt={list.school}
                     />
                     <div className="flex flex-col justify-evenly h-24">
-                      <h3 className="font-OAGothic-ExtraBold text-lg sm:xl xl:text-2xl text-nowrap">
+                      <h3 className="font-OAGothic-ExtraBold text-base xs:text-lg sm:xl xl:text-2xl text-nowrap">
                         {list.school}
-                        <span className="bg-main-blue text-sm xl:text-base py-1 px-2 ml-4 rounded font-OAGothic-Medium font-sans">
+                        <span className="hidden xs:inline-block bg-main-blue text-sm xl:text-base py-1 px-2 ml-4 rounded font-OAGothic-Medium font-sans">
                           {list.state}
                         </span>
                       </h3>
-                      <p className="text-lg sm:xl">{list.major}</p>
-                      <p className="text-lg sm:xl text-main-lightGray">
+                      <p className="text-base xs:text-lg sm:xl">{list.major}</p>
+                      <p className="text-base xs:text-lg sm:xl text-main-lightGray">
                         {list.date}
                       </p>
                     </div>

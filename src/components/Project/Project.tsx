@@ -1,10 +1,11 @@
 import useModal from "@/hooks/useModal";
 import { projectLists } from "./Project_List";
 import Modal from "./Modal/Modal";
-import { Link } from "react-router-dom";
 import { Navigation } from "../Navigation/Navigation";
+import useModals from "@/hooks/useModals";
 export const Project = () => {
-  const { isVisible, openModal, closeModal } = useModal();
+  const { isVisible, openModal, closeModal } = useModals();
+
   return (
     <>
       <Navigation />
@@ -22,7 +23,7 @@ export const Project = () => {
               projectLists.map((list) => {
                 const descriptionArray = list.description.split("/ ");
                 return (
-                  <div key={list.name}>
+                  <div key={list.id}>
                     <div className=" w-52 h-36 sm:w-72 sm:h-52 xl:w-96 xl:h-64 bg-transparent group perspective cursor-pointer">
                       <div className="relative preserve-3d group-hover:rotate-y-180 w-full h-full duration-1000 rounded">
                         <div className="absolute backface-hidden border-2 shadow-xl w-full h-full rounded">
@@ -49,7 +50,7 @@ export const Project = () => {
                               {descriptionArray[1]}
                             </p>
                             <button
-                              onClick={openModal}
+                              onClick={() => openModal(list.id)}
                               className="rounded-md bg-white text-main-gray my-4 hover:text-white hover:bg-main-purple w-44 sm:w-64 xl:w-80 xl:text-xl xl:py-1"
                             >
                               프로젝트 보러가기
@@ -58,11 +59,17 @@ export const Project = () => {
                         </div>
                       </div>
                     </div>
-                    {isVisible && (
-                      <Modal closeModal={closeModal} project={list}>
+
+                    {
+                      <Modal
+                        id={list.id}
+                        isVisible={isVisible(list.id)}
+                        closeModal={closeModal}
+                        project={list}
+                      >
                         {list.name}
                       </Modal>
-                    )}
+                    }
                   </div>
                 );
               })}
