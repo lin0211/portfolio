@@ -1,20 +1,46 @@
-import { motion } from "framer-motion";
+import { Footer } from "../Footer/Footer";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
+
 export const Intro = () => {
+  const introRef = useRef(null);
+  const isInView = useInView(introRef, { once: false });
+  const mainControls = useAnimation();
+  const variants = {
+    hidden: { opacity: 0, y: 0, x: 100 },
+    visible: { opacity: 1, y: 0, x: 0 },
+  };
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    } else {
+      mainControls.start("hidden");
+    }
+  }, [isInView, mainControls]);
+
   return (
     <>
       <section
+        ref={introRef}
         id="intro"
-        className=" bg-[url('/titlepage.webp')] h-screen bg-cover bg-center bg-no-repeat"
+        className=" bg-[url('/titlepage.webp')] h-screen bg-cover bg-center bg-no-repeat relative"
       >
-        <div className="absolute text-center top-24 right-1/2 transform translate-x-1/2 sm:translate-x-0  sm:text-right sm:top-auto sm:right-6 sm:bottom-20 lg:right-20 flex flex-col gap-4 font-OAGothic-ExtraBold">
-          <p className="text-4xl xl:text-6xl bg-main-gray bg-opacity-50 text-nowrap">
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 1 }}
+          className="absolute  text-right top-auto right-6 bottom-20 lg:right-20 flex flex-col gap-4 font-OAGothic-ExtraBold"
+        >
+          <motion.p className="text-4xl xl:text-6xl bg-main-gray bg-opacity-50 text-nowrap">
             프론트엔드 개발자
-          </p>
-          <motion.p initial="hidden" animate className="text-7xl xl:text-8xl">
+          </motion.p>
+          <motion.p className="intro-name text-7xl xl:text-8xl">
             정서린
           </motion.p>
-        </div>
+        </motion.div>
       </section>
+      <Footer />
     </>
   );
 };
