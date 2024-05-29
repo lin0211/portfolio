@@ -1,18 +1,21 @@
 import { useState } from "react";
 
-function useModals() {
-  const [modals, setModals] = useState({});
+interface ModalsState {
+  [key: string]: boolean;
+}
 
-  const openModal = (id) => {
-    console.log(id);
+function useModals() {
+  const [modals, setModals] = useState<ModalsState>({});
+
+  const openModal = (id: string) => {
     setModals((prevModals) => ({ ...prevModals, [id]: true }));
   };
 
-  const closeModal = (id) => {
+  const closeModal = (id: string) => {
     setModals((prevModals) => ({ ...prevModals, [id]: false }));
   };
 
-  const isVisible = (id) => !!modals[id];
+  const isVisible = (id: string) => !!modals[id];
 
   return {
     isVisible,

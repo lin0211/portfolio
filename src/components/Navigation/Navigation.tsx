@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const Navigation = () => {
   const navList = ["home", "project", "contact"];
@@ -27,7 +28,11 @@ export const Navigation = () => {
           alt="리스트 열기"
         />
       </button>
-      <nav className={navClassName}>
+      <motion.nav
+        initial={{ x: -340 }}
+        animate={{ x: 0, transition: { duration: 1, delay: 0.2 } }}
+        className={navClassName}
+      >
         <ul className="flex gap-4 justify-center items-center xl:gap-12 text-sm sm:text-base text-white/80 ">
           {navList.map((list, index) => {
             return (
@@ -52,7 +57,7 @@ export const Navigation = () => {
             />
           </button>
         </ul>
-      </nav>
+      </motion.nav>
     </>
   );
 };

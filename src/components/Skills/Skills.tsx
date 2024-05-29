@@ -8,12 +8,16 @@ export const Skills = () => {
   const isInView = useInView(ref, { once: true });
   return (
     <>
-      <section ref={ref} id="skills" className="h-screen bg-main-background">
+      <section
+        ref={ref}
+        id="skills"
+        className="h-screen bg-main-background  bg-cover"
+      >
         <div className="h-screen flex flex-col justify-center items-center gap-10 px-4">
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-OAGothic-ExtraBold">
             SKILLS
           </h2>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 xs:gap-8">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 xs:gap-8 px-4">
             {skillLists.map((list) => {
               return (
                 <figure

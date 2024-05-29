@@ -42,7 +42,7 @@ export const Education = () => {
       <section
         ref={educationRef}
         id="education"
-        className="h-screen bg-main-background"
+        className="h-screen bg-main-background  bg-cover"
       >
         <div className="h-screen flex flex-col md:flex-row justify-center items-center gap-10 xl:gap-16 p-4">
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-OAGothic-ExtraBold">

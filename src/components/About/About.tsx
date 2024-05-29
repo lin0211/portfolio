@@ -21,7 +21,7 @@ export const About = () => {
       <section
         ref={aboutRef}
         id="about"
-        className="h-screen bg-main-background relative"
+        className="h-screen bg-main-background bg-cover relative"
       >
         <h2 className="sr-only">ABOUT</h2>
         <div className="h-screen flex flex-col justify-center items-center gap-12">
@@ -31,7 +31,6 @@ export const About = () => {
             }}
             transition={{
               duration: 2,
-              ease: "easeInOut",
               repeat: Infinity,
               repeatDelay: 2,
             }}

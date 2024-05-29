@@ -29,7 +29,7 @@ export const Intro = () => {
           variants={variants}
           initial="hidden"
           animate={mainControls}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, delay: 1 }}
           className="absolute  text-right top-auto right-6 bottom-20 lg:right-20 flex flex-col gap-4 font-OAGothic-ExtraBold"
         >
           <motion.p className="text-4xl xl:text-6xl bg-main-gray bg-opacity-50 text-nowrap">

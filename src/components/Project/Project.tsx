@@ -1,10 +1,34 @@
-import useModal from "@/hooks/useModal";
 import { projectLists } from "./Project_List";
 import Modal from "./Modal/Modal";
 import { Navigation } from "../Navigation/Navigation";
 import useModals from "@/hooks/useModals";
+import { motion } from "framer-motion";
+import { Footer } from "../Footer/Footer";
+
 export const Project = () => {
   const { isVisible, openModal, closeModal } = useModals();
+  const container = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
 
   return (
     <>
@@ -18,13 +42,23 @@ export const Project = () => {
             PROJECT
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-8">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-8"
+          >
             {projectLists &&
-              projectLists.map((list) => {
+              projectLists.map((list, index) => {
                 const descriptionArray = list.description.split("/ ");
                 return (
-                  <div key={list.id}>
-                    <div className=" w-52 h-36 sm:w-72 sm:h-52 xl:w-96 xl:h-64 bg-transparent group perspective cursor-pointer">
+                  <motion.div variants={item} key={list.id}>
+                    <div
+                      tabIndex={index + 1}
+                      className="w-52 h-36 sm:w-72 sm:h-52 xl:w-96 xl:h-64 bg-transparent group perspective cursor-pointer"
+                      onClick={() => openModal(list.id)}
+                      title={list.name + " 프로젝트 더보기"}
+                    >
                       <div className="relative preserve-3d group-hover:rotate-y-180 w-full h-full duration-1000 rounded">
                         <div className="absolute backface-hidden border-2 shadow-xl w-full h-full rounded">
                           <img
@@ -49,12 +83,6 @@ export const Project = () => {
                             <p className="text-sm md:text-lg xl:text-xl hidden sm:block">
                               {descriptionArray[1]}
                             </p>
-                            <button
-                              onClick={() => openModal(list.id)}
-                              className="rounded-md bg-white text-main-gray my-4 hover:text-white hover:bg-main-purple w-44 sm:w-64 xl:w-80 xl:text-xl xl:py-1"
-                            >
-                              프로젝트 보러가기
-                            </button>
                           </div>
                         </div>
                       </div>
@@ -66,16 +94,15 @@ export const Project = () => {
                         isVisible={isVisible(list.id)}
                         closeModal={closeModal}
                         project={list}
-                      >
-                        {list.name}
-                      </Modal>
+                      />
                     }
-                  </div>
+                  </motion.div>
                 );
               })}
-          </div>
+          </motion.div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };
