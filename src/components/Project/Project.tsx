@@ -35,9 +35,9 @@ export const Project = () => {
       <Navigation />
       <section
         id="project"
-        className="snap-start h-screen relative bg-main-background bg-cover"
+        className="snap-start h-auto relative bg-main-background bg-cover py-20"
       >
-        <div className="h-screen flex flex-col justify-center items-center gap-10 px-4">
+        <div className="h-auto flex flex-col justify-center items-center gap-10 px-4">
           <h2 className="text-3xl xl:text-5xl font-OAGothic-ExtraBold">
             PROJECT
           </h2>
@@ -46,7 +46,7 @@ export const Project = () => {
             variants={container}
             initial="hidden"
             animate="show"
-            className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8"
           >
             {projectLists &&
               projectLists.map((list, index) => {
@@ -55,7 +55,7 @@ export const Project = () => {
                   <motion.div variants={item} key={list.id}>
                     <div
                       tabIndex={index + 1}
-                      className="w-52 h-36 sm:w-72 sm:h-52 xl:w-96 xl:h-64 bg-transparent group perspective cursor-pointer"
+                      className="w-72 h-52 xl:w-96 xl:h-64 bg-transparent group perspective cursor-pointer"
                       onClick={() => openModal(list.id)}
                       title={list.name + " 프로젝트 더보기"}
                     >
