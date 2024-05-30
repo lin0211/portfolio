@@ -35,7 +35,7 @@ export const Project = () => {
       <Navigation />
       <section
         id="project"
-        className="snap-start h-auto relative bg-main-background bg-cover py-20"
+        className="snap-start h-screen relative bg-main-background bg-cover py-20"
       >
         <div className="h-auto flex flex-col justify-center items-center gap-10 px-4">
           <h2 className="text-3xl xl:text-5xl font-OAGothic-ExtraBold">
