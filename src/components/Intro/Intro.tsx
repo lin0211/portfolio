@@ -1,10 +1,10 @@
-import { Footer } from "../Footer/Footer";
+import { Footer } from "@/components/Footer/Footer";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 export const Intro = () => {
   const introRef = useRef(null);
-  const isInView = useInView(introRef, { once: false });
+  const isInView = useInView(introRef, { once: true });
   const mainControls = useAnimation();
   const variants = {
     hidden: { opacity: 0, y: 0, x: 100 },

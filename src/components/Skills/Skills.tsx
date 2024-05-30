@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Footer } from "../Footer/Footer";
+import { Footer } from "@/components/Footer/Footer";
 import { skillLists } from "./Skills_List";
 import { motion, useInView } from "framer-motion";
 

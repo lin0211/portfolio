@@ -10,18 +10,19 @@ import "swiper/css/pagination";
 import { Mousewheel, Pagination } from "swiper/modules";
 
 export const Home = () => {
-  const swiperStyle = {
-    "--swiper-pagination-color": "#6A8FDD",
-    "--swiper-pagination-bullet-inactive-color": "#999999",
-    "--swiper-pagination-bullet-inactive-opacity": "1",
-    "--swiper-pagination-bullet-size": "12px",
-    "--swiper-pagination-bullet-horizontal-gap": "6px",
-  };
   return (
     <>
       <Nav />
       <Swiper
-        style={swiperStyle}
+        style={
+          {
+            "--swiper-pagination-color": "#6A8FDD",
+            "--swiper-pagination-bullet-inactive-color": "#999999",
+            "--swiper-pagination-bullet-inactive-opacity": "1",
+            "--swiper-pagination-bullet-size": "12px",
+            "--swiper-pagination-bullet-horizontal-gap": "6px",
+          } as React.CSSProperties
+        }
         direction={"vertical"}
         slidesPerView={1}
         spaceBetween={30}

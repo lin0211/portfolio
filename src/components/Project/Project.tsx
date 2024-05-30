@@ -1,9 +1,9 @@
 import { projectLists } from "./Project_List";
 import Modal from "./Modal/Modal";
-import { Navigation } from "../Navigation/Navigation";
+import { Navigation } from "@/components/Navigation/Navigation";
 import useModals from "@/hooks/useModals";
+import { Footer } from "@/components/Footer/Footer";
 import { motion } from "framer-motion";
-import { Footer } from "../Footer/Footer";
 
 export const Project = () => {
   const { isVisible, openModal, closeModal } = useModals();

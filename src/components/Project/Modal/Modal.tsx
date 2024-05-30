@@ -39,7 +39,7 @@ const Modal: React.FC<ModalProps> = ({
             y: 0,
             transition: { duration: 0.5, delay: 0.2 },
           }}
-          className="w-full h-full rounded bg-white flex flex-col border-8 gap-6 relative p-4 justify-center text-center"
+          className="w-full h-full rounded-t bg-white flex flex-col border-8 border-b-0 gap-2 relative p-4 justify-center text-center"
         >
           <button
             className="absolute top-2 right-2 w:10 h-10 sm:w-12 sm:h-12 hover:scale-110"

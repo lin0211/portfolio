@@ -1,5 +1,5 @@
-import { Footer } from "../Footer/Footer";
-import { Navigation } from "../Navigation/Navigation";
+import { Footer } from "@/components/Footer/Footer";
+import { Navigation } from "@/components/Navigation/Navigation";
 import { motion } from "framer-motion";
 
 export const Contact = () => {
