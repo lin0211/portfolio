@@ -16,7 +16,7 @@ export const projectLists = [
     git: "https://github.com/lin0211/portfolio",
     imageSrc: ["/sl_logo.svg", "/project/portfolio_site.png"],
     videoSrc: "/project/portfolio_video.webp",
-    site_Address: "",
+    site_Address: "https://sirlin-portfolio.netlify.app/",
     role: "swiper, framer-motion를 이용한 애니메이션 포트폴리오, ",
   },
   {
