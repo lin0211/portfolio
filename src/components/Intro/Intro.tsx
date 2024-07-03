@@ -1,4 +1,3 @@
-import { Footer } from "@/components/Footer/Footer";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
@@ -40,7 +39,6 @@ export const Intro = () => {
           </motion.p>
         </motion.div>
       </section>
-      <Footer />
     </>
   );
 };
