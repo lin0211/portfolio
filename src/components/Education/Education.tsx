@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import { Footer } from "../Footer/Footer";
 import { educationLists } from "./Education_List";
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -85,7 +84,6 @@ export const Education = () => {
           </motion.div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };

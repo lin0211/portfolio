@@ -32,3 +32,12 @@
   --swiper-pagination-bullet-size: "12px";
   --swiper-pagination-bullet-horizontal-gap: "6px";
 }
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-snap-align: center;
+}

@@ -1,5 +1,4 @@
 import { motion, useAnimation, useInView } from "framer-motion";
-import { Footer } from "../Footer/Footer";
 import { useEffect, useRef } from "react";
 export const About = () => {
   const aboutRef = useRef(null);
@@ -72,7 +71,6 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };

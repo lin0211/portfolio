@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 export const Navigation = () => {
   const navList = ["home", "project", "contact"];
+  // const navList = ["about", "project", "skills", "contact"];
+
   const [navClassName, setNavClassName] = useState(
     "w-fit py-2 px-4 fixed z-30 bg-black/20 backdrop-blur-sm top-4 left-0 shadow-lg rounded-e-full"
   );
